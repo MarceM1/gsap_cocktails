@@ -100,6 +100,13 @@ const goodLists = [
  "Freshly muddled flavors",
 ];
 
+const aboutCraftedList = [
+"Perfectly balanced blends",
+"Garnish to perfection",
+"Ice-cold every time",
+"Expert shaken & stirred",
+];
+
 const storeInfo = {
  heading: "Where to Find Us",
  address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
@@ -180,4 +187,5 @@ export {
  storeInfo,
  socials,
  sliderLists,
+ aboutCraftedList
 };

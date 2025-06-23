@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText, ScrollTrigger } from "gsap/all";
+import { aboutCraftedList } from "../../constants";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -75,32 +76,17 @@ const About = () => {
             <div className="noisy"/>
             <div className="flex flex-col w-full h-full px-12 py-12 text-center gap-5">
                 <h3 className="text-4xl font-modern-negra border-b-[1px] border-gray-400 pb-2 text-white">Crafted to Impress</h3>
-                <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2">
-                        <img src="/images/check.png" alt="check" 
-                        className="size-4"
-                        />
-                        <p className="text-lg">Perfectly balanced blends</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <img src="/images/check.png" alt="check" 
-                        className="size-4"
-                        />
-                        <p className="text-lg">Garnish to perfection</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <img src="/images/check.png" alt="check" 
-                        className="size-4"
-                        />
-                        <p className="text-lg">Ice-cold every time</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <img src="/images/check.png" alt="check" 
-                        className="size-4"
-                        />
-                        <p className="text-lg">Expert shaken $ stirred</p>
-                    </div>
-                </div>
+                <ul className="space-y-4 will-fade">
+                    {
+                       aboutCraftedList.map((feature, index) => (
+                         <li key={index} className="flex items-center gap-2">
+                            <img src="/images/check.png" alt="check" className="size-4"/>
+                            {feature}
+                            </li>  
+                       )) 
+                    }
+                </ul>
+                
             </div>
         </div>
 
