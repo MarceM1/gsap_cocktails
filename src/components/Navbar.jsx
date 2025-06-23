@@ -18,10 +18,13 @@ const Navbar = () => {
       "nav",
       {
         backgroundColor: "transparent",
+        backdropFilter: "blur(0px)",
+        webkitBackdropFilter: "blur(0px)",
       },
       {
         backgroundColor: "#00000050",
-        backgroundFilter: "blur(10px)",
+        backdropFilter: "blur(10px)",
+        webkitBackdropFilter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",
       }
